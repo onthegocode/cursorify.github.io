@@ -5,7 +5,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
 
 import styles from './index.module.css'
-import styled from '@emotion/styled'
 import StyledWrapper from './index.style'
 
 function HomepageHeader() {
