@@ -2,6 +2,24 @@ import styled from '@emotion/styled'
 import OpenColor from 'open-color'
 
 const StyledWrapper = styled.div`
+  header {
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    @media screen and (max-width: 996px) {
+      header {
+        padding: 2rem;
+      }
+    }
+  }
   main {
     display: flex;
     justify-content: center;
