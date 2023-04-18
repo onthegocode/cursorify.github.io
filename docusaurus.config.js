@@ -76,7 +76,8 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          { to: '/blog', label: 'Cursor', position: 'left' },
+          { to: '/cursor', label: 'Cursor', position: 'left' },
+          { to: '/showcase', label: 'Showcase', position: 'left' },
           {
             href: 'https://github.com/cursorify/cursorify',
             label: 'GitHub',

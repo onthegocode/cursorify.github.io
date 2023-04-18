@@ -4,44 +4,24 @@ sidebar_position: 2
 
 # Default options
 
-Let's discover **Docusaurus in less than 5 minutes**.
+If you want to set default options for the cursor, you can apply the default cursor component, opacity, and delay. Typically, changing the cursor settings on a website is not common, so it is better to apply your website settings to the default settings.
 
-## Getting Started
+Refer to the description of each option below.
 
-Get started by **creating a new site**.
+- cursor: pass the React component you want to apply.
+- delay: You can pass a number between 1 and 10.
+- opacity: You can pass a number between 0 and 1.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+```tsx
+import { CursorifyProvider, EmojiCursor } from 'react-cursorify'
 
-### What you'll need
+const App = () => {
+  return (
+    <CursorifyProvider cursor={EmojiCursor} delay={2} opacity={0.7}>
+      <>{/*....your component */}</>
+    </CursorifyProvider>
+  )
+}
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+export default App
 ```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.

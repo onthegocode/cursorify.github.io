@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import clsx from 'clsx'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
@@ -6,38 +6,7 @@ import Layout from '@theme/Layout'
 
 import StyledWrapper from './index.style'
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext()
-  return (
-    <header className={clsx('hero hero--primary', 'header')}>
-      <div className="container">
-        <h1 className="hero__title">
-          🕹️ <br />
-          {siteConfig.title}
-        </h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={'buttons'}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/quick-start"
-            style={{ width: '180px' }}
-          >
-            Get Started
-          </Link>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/quick-start"
-            style={{ width: '180px' }}
-          >
-            Cursor
-          </Link>
-        </div>
-      </div>
-    </header>
-  )
-}
-
-export default function Home(): JSX.Element {
+const Home: FC = () => {
   const { siteConfig } = useDocusaurusContext()
   return (
     <Layout
@@ -45,7 +14,31 @@ export default function Home(): JSX.Element {
       description="Customizable cursor component in your project."
     >
       <StyledWrapper>
-        <HomepageHeader />
+        <header className={clsx('hero hero--primary', 'header')}>
+          <div className="container">
+            <h1 className="hero__title">
+              🕹️ <br />
+              {siteConfig.title}
+            </h1>
+            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <div className={'buttons'}>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/quick-start"
+                style={{ width: '180px' }}
+              >
+                Get Started
+              </Link>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/quick-start"
+                style={{ width: '180px' }}
+              >
+                Cursor
+              </Link>
+            </div>
+          </div>
+        </header>
         <main>
           <div className="window">
             <div className="header">
@@ -158,3 +151,5 @@ export default function Home(): JSX.Element {
     </Layout>
   )
 }
+
+export default Home

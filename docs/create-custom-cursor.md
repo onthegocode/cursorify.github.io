@@ -4,44 +4,38 @@ sidebar_position: 5
 
 # Create custom cursor
 
-Let's discover **Docusaurus in less than 5 minutes**.
+You can easily create your own cursor component by using `useCursorify`. The useCursorify hook returns `mouseState` and `hoverState`. Refer to the description of each below.
 
-## Getting Started
+- mouseState: Displays the mouse state. Currently, only 'default' and 'mouseDown' exist.
+- hoverState: Displays the style applied using the `useHoverRegister` hook.
 
-Get started by **creating a new site**.
+The following is the `EmojiCursor` cursor component of react-cursorify. You don't necessarily have to apply styles using emotion. Try creating a cursor component with your own style!
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+```tsx
+import useCursorify from '@/react-cursorify/hooks/useCursorify'
+import styled from '@emotion/styled'
 
-### What you'll need
+const EmojiCursor = () => {
+  const { mouseState, hoverState } = useCursorify()
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+  return (
+    <StyledWrapper data-hover={hoverState} {...{ a: 1 }}>
+      {(() => {
+        if (mouseState === 'mouseDown') return '✊'
+        if (hoverState === 'pointer') return '👆'
+        if (hoverState === 'text') return '✍️'
 
-## Generate a new site
+        return '🖐️'
+      })()}
+    </StyledWrapper>
+  )
+}
 
-Generate a new Docusaurus site using the **classic template**.
+export default EmojiCursor
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+const StyledWrapper = styled.div`
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+`
 ```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
