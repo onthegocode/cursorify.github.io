@@ -1,9 +1,7 @@
 import Layout from '@theme/Layout'
-import React from 'react'
+import React, { FC } from 'react'
 
-type Props = {}
-
-const Showcase = (props: Props) => {
+const Showcase: FC = () => {
   return <Layout>Showcase</Layout>
 }
 
