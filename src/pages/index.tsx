@@ -14,7 +14,7 @@ const Home: FC = () => {
       description="Customizable cursor component in your project."
     >
       <StyledWrapper>
-        <header className={clsx('hero hero--primary', 'header')}>
+        <header className={'hero hero--primary header'}>
           <div className="container">
             <h1 className="hero__title">
               🕹️ <br />
