@@ -1,13 +1,23 @@
 import React, { FC } from 'react'
-import clsx from 'clsx'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
 
 import StyledWrapper from './index.style'
+import {
+  useHoverRegister,
+  useUpdateCursorify,
+  useCursorifyState,
+  DefaultCursor,
+} from '@cursorify/react'
+import { PhingerCursor, EmojiCursor } from '@cursorify/cursors'
 
 const Home: FC = () => {
   const { siteConfig } = useDocusaurusContext()
+  const register = useHoverRegister()
+  const state = useCursorifyState()
+  const { updateCursor, updateOpacity, updateDelay } = useUpdateCursorify()
+
   return (
     <Layout
       title={`Home`}
@@ -40,23 +50,23 @@ const Home: FC = () => {
           </div>
         </header>
         <main>
-          <div className="window">
+          <div className="window common-container">
             <div className="header">
               <div className="lt">
                 <div
                   className="btn"
                   data-type="close"
-                  // {...register('pointer')}
+                  {...register('pointer')}
                 ></div>
                 <div
                   className="btn"
                   data-type="minimize"
-                  // {...register('pointer')}
+                  {...register('pointer')}
                 ></div>
                 <div
                   className="btn"
                   data-type="maximize"
-                  // {...register('pointer')}
+                  {...register('pointer')}
                 ></div>
               </div>
               {/* <div className="rt">🕹️</div> */}
@@ -74,30 +84,30 @@ const Home: FC = () => {
                 <div className="cursor">
                   <div
                     className="cursor-wrapper"
-                    // onClick={() => updateCursor(<CircleCursor />)}
-                    // {...register('pointer')}
+                    onClick={() => updateCursor(<DefaultCursor />)}
+                    {...register('pointer')}
                   >
-                    {/* <CircleCursor disabled /> */}
+                    <DefaultCursor disabled />
                   </div>
-                  <h4 className="title">Circle</h4>
+                  <h4 className="title">Default</h4>
                 </div>
                 <div className="cursor">
                   <div
                     className="cursor-wrapper phinger"
-                    // onClick={() => updateCursor(<PhingerCursor />)}
-                    // {...register('pointer')}
+                    onClick={() => updateCursor(<PhingerCursor />)}
+                    {...register('pointer')}
                   >
-                    {/* <PhingerCursor disabled /> */}
+                    <PhingerCursor disabled />
                   </div>
                   <h4 className="title">Phinger</h4>
                 </div>
                 <div className="cursor">
                   <div
                     className="cursor-wrapper"
-                    // onClick={() => updateCursor(<EmojiCursor />)}
-                    // {...register('pointer')}
+                    onClick={() => updateCursor(<EmojiCursor />)}
+                    {...register('pointer')}
                   >
-                    {/* <EmojiCursor disabled /> */}
+                    <EmojiCursor disabled />
                   </div>
                   <h4 className="title">Emoji</h4>
                 </div>
@@ -109,15 +119,15 @@ const Home: FC = () => {
                     type="range"
                     name="opacity"
                     id="opacity"
-                    // value={state.opacity}
+                    value={state.opacity}
                     onChange={(e) => {
-                      // updateOpacity(+e.target.value)
+                      updateOpacity(+e.target.value)
                     }}
                     min={0.1}
                     max={1}
                     step={0.1}
                   />
-                  <div className="value">{/* {state.opacity} */}</div>
+                  <div className="value">{state.opacity}</div>
                 </div>
                 <div className="option">
                   <div className="label">Delay</div>
@@ -125,26 +135,18 @@ const Home: FC = () => {
                     type="range"
                     name="delay"
                     id="delay"
-                    // value={state.delay}
+                    value={state.delay}
                     onChange={(e) => {
-                      // updateDelay(+e.target.value)
+                      updateDelay(+e.target.value)
                     }}
                     min={1}
                     max={40}
                     step={1}
                   />
-                  <div className="value">{/* {state.delay} */}</div>
+                  <div className="value">{state.delay}</div>
                 </div>
               </div>
             </div>
-            {/* mouse component 선택 */}
-            {/* cursor control section */}
-            {/* 
-          cursor component mac scroll style
-          delay, 
-          size, 
-          opacity 
-          */}
           </div>
         </main>
       </StyledWrapper>

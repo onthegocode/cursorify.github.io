@@ -1,5 +1,5 @@
 import React, { FC, PropsWithChildren } from 'react'
-import { CursorifyProvider } from 'react-cursorify'
+import { CursorifyProvider } from '@cursorify/react'
 
 const Root: FC<PropsWithChildren> = ({ children }) => {
   return <CursorifyProvider opacity={1}>{children}</CursorifyProvider>
