@@ -13,7 +13,7 @@ Refer to the description of each option below.
 - opacity: You can pass a number between 0 and 1.
 
 ```tsx
-import { CursorifyProvider, EmojiCursor } from 'react-cursorify'
+import { CursorifyProvider, EmojiCursor } from '@cursorify/react'
 
 const App = () => {
   return (

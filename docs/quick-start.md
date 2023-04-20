@@ -17,13 +17,13 @@ You can install react-cursorify in your React project using the two commands bel
 via npm:
 
 ```zsh
-npm install react-cursorify
+npm install @cursorify/react
 ```
 
 or via yarn:
 
 ```zsh
-yarn add react-cursorify
+yarn add @cursorify/react
 ```
 
 ## Apply to your react project
@@ -31,7 +31,7 @@ yarn add react-cursorify
 To apply react-cursorify, simply wrap your React project with `CursorifyProvider`. It's easy, right?
 
 ```tsx
-import { CursorifyProvider } from 'react-cursorify'
+import { CursorifyProvider } from '@cursorify/react'
 
 const App = () => {
   return (

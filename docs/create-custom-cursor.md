@@ -12,7 +12,7 @@ You can easily create your own cursor component by using `useCursorify`. The use
 The following is the `EmojiCursor` cursor component of react-cursorify. You don't necessarily have to apply styles using emotion. Try creating a cursor component with your own style!
 
 ```tsx
-import useCursorify from '@/react-cursorify/hooks/useCursorify'
+import { useCursorify } from '@cursorify/react'
 import styled from '@emotion/styled'
 
 const EmojiCursor = () => {

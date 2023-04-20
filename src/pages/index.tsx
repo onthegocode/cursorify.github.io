@@ -41,10 +41,10 @@ const Home: FC = () => {
               </Link>
               <Link
                 className="button button--secondary button--lg"
-                to="/docs/quick-start"
+                to="/cursors"
                 style={{ width: '180px' }}
               >
-                Cursor
+                Cursors
               </Link>
             </div>
           </div>
