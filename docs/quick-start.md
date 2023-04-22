@@ -16,13 +16,13 @@ You can install react-cursorify in your React project using the two commands bel
 
 via npm:
 
-```zsh
+```bash
 npm install @cursorify/react
 ```
 
 or via yarn:
 
-```zsh
+```bash
 yarn add @cursorify/react
 ```
 
@@ -46,8 +46,8 @@ export default App
 
 And that's it! It's really simple, isn't it?
 
-If you want to change the options of the default cursor, you can refer to [Default options](./default-options.md).
+If you want to change the options of the default cursor, you can refer to [Cursorify options](./cursorify-options.md).
 
 If you want to apply styles to the cursor, you can refer to [Apply cursor style](./apply-cursor-style.md).
 
-And if you want to create your own cursor component, you can check out [Create custom cursor](./create-custom-cursor.md)!
+And if you want to apply custom cursor component, you can check out [Custom cursor](./custom-cursor.md)!

@@ -2,7 +2,9 @@
 sidebar_position: 2
 ---
 
-# Default options
+# Cursorify options
+
+## Default options
 
 If you want to set default options for the cursor, you can apply the default cursor component, opacity, and delay. Typically, changing the cursor settings on a website is not common, so it is better to apply your website settings to the default settings.
 
@@ -24,4 +26,32 @@ const App = () => {
 }
 
 export default App
+```
+
+# Update options
+
+While it's not common to change the cursor on a website, we provide a hook that allows you to do so. To change the cursor component, use the `useUpdateCursorify` hook. The changeCursor argument should be a React component.
+
+```tsx
+import { useUpdateCursorify, PhingerCursor } from '@cursorify/react'
+
+const Home = () => {
+  const {
+    updateCursor,
+    updateDelay,
+    updateOpacity,
+    updatedefaultCursorVisible,
+  } = useUpdateCursorify()
+
+  const handleClick = () => {
+    changeCursor(PhingerCursor)
+  }
+  return (
+    <div>
+      <button onClick={handleClick}>click me 🕹️</button>
+    </div>
+  )
+}
+
+export default Home
 ```

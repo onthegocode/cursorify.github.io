@@ -4,16 +4,14 @@ sidebar_position: 3
 
 # Apply cursor style
 
-To apply hover style to the cursor, you must use the `useHoverRegister` hook. You can use the hook as follows. For the register argument, write the [cursor style keyword](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor#values).
+To apply hover style to the cursor, you just set cursor style in your tag. The cursor style should not be applied via classname because cursorify defects the cursor style through the style attribute.
 
 ```tsx
-import { useHoverRegister } from '@cursorify/react'
-
 const Home = () => {
-  const register = useHoverRegister()
   return (
     <div>
-      <button {...register('pointer')}>hover me 🕹️</button>
+      <h1 style={{ cursor: 'text' }}>cursorify test</h1>
+      <button style={{ cursor: 'pointer' }}>hover me 🕹️</button>
     </div>
   )
 }
