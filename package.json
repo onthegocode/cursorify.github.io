@@ -15,8 +15,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@cursorify/cursors": "^0.0.1",
-    "@cursorify/react": "^0.0.3",
+    "@cursorify/cursors": "^0.0.37",
+    "@cursorify/react": "^0.0.37",
     "@docusaurus/core": "2.4.0",
     "@docusaurus/preset-classic": "2.4.0",
     "@emotion/react": "^11.10.6",

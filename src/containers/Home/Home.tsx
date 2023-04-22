@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import StyledWrapper from './Home.style'
 import {
-  useHoverRegister,
   useUpdateCursorify,
   useCursorifyState,
   DefaultCursor,
@@ -10,7 +9,6 @@ import { PhingerCursor, EmojiCursor } from '@cursorify/cursors'
 import { Header } from './Header'
 
 export const Home: FC = () => {
-  const register = useHoverRegister()
   const state = useCursorifyState()
   const { updateCursor, updateOpacity, updateDelay } = useUpdateCursorify()
 
@@ -21,58 +19,43 @@ export const Home: FC = () => {
         <div className="window common-container">
           <div className="header">
             <div className="lt">
-              <div
-                className="btn"
-                data-type="close"
-                {...register('pointer')}
-              ></div>
-              <div
-                className="btn"
-                data-type="minimize"
-                {...register('pointer')}
-              ></div>
-              <div
-                className="btn"
-                data-type="maximize"
-                {...register('pointer')}
-              ></div>
+              <div className="btn" data-type="close"></div>
+              <div className="btn" data-type="minimize"></div>
+              <div className="btn" data-type="maximize"></div>
             </div>
           </div>
           <div className="content">
-            <div className="title">
+            <div className="title" style={{ cursor: 'text' }}>
               <h2>Easily customize your mouse cursor 🎉</h2>
-              <div className="description">
+              <div className="description" style={{ cursor: 'text' }}>
                 React Cursorify is a library that helps you easily custom the
                 style of the mouse cursor in a React project. <br /> Choose your
                 cursor below!
               </div>
             </div>
             <div className="cursors">
-              <div className="cursor">
+              <div className="cursor" style={{ cursor: 'pointer' }}>
                 <div
                   className="cursor-wrapper"
                   onClick={() => updateCursor(<DefaultCursor />)}
-                  {...register('pointer')}
                 >
                   <DefaultCursor disabled />
                 </div>
                 <h4 className="title">Default</h4>
               </div>
-              <div className="cursor">
+              <div className="cursor" style={{ cursor: 'pointer' }}>
                 <div
                   className="cursor-wrapper phinger"
                   onClick={() => updateCursor(<PhingerCursor />)}
-                  {...register('pointer')}
                 >
                   <PhingerCursor disabled />
                 </div>
                 <h4 className="title">Phinger</h4>
               </div>
-              <div className="cursor">
+              <div className="cursor" style={{ cursor: 'pointer' }}>
                 <div
                   className="cursor-wrapper"
                   onClick={() => updateCursor(<EmojiCursor />)}
-                  {...register('pointer')}
                 >
                   <EmojiCursor disabled />
                 </div>

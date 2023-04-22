@@ -17,14 +17,14 @@ export const Header: FC = () => {
           <Link
             className="button button--secondary button--lg"
             to="/docs/quick-start"
-            style={{ width: '180px' }}
+            style={{ width: '180px', cursor: 'pointer' }}
           >
             Get Started
           </Link>
           <Link
             className="button button--secondary button--lg"
             to="/cursors"
-            style={{ width: '180px' }}
+            style={{ width: '180px', cursor: 'pointer' }}
           >
             Cursors
           </Link>
