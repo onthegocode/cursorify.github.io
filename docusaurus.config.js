@@ -76,7 +76,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          { to: '/cursors', label: 'Cursors', position: 'left' },
+          { to: '/cursors', label: 'Cursors', position: 'left', },
           { to: '/showcase', label: 'Showcase', position: 'left' },
           {
             href: 'https://github.com/cursorify/cursorify',
@@ -86,8 +86,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} morethanmin`,
+        copyright: `Copyright © ${new Date().getFullYear()}. Made with ❤️ by morethanmin`,
       },
       prism: {
         theme: lightCodeTheme,
