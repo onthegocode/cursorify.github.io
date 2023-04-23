@@ -11,15 +11,23 @@ If you want to set default options for the cursor, you can apply the default cur
 Refer to the description of each option below.
 
 - cursor: pass the React component you want to apply.
-- delay: You can pass a number between 1 and 10.
 - opacity: You can pass a number between 0 and 1.
+- delay: You can pass a number between 1 and 40.
+- defaultCursorVisible:
+- breakpoint: disable cursorify breakpoint(px).
 
 ```tsx
 import { CursorifyProvider, EmojiCursor } from '@cursorify/react'
 
 const App = () => {
   return (
-    <CursorifyProvider cursor={EmojiCursor} delay={2} opacity={0.7}>
+    <CursorifyProvider
+      cursor={<DefaultCursor />}
+      opacity={1}
+      delay={1}
+      defaultCursorVisible={false}
+      breakpoint={997}
+    >
       <>{/*....your component */}</>
     </CursorifyProvider>
   )
