@@ -39,29 +39,32 @@ const Home: FC = () => {
                 </div>
               </div>
               <div className="cursors">
-                <div className="cursor" style={{ cursor: 'pointer' }}>
-                  <div
-                    className="cursor-wrapper"
-                    onClick={() => updateCursor(<DefaultCursor />)}
-                  >
+                <div
+                  className="cursor"
+                  onClick={() => updateCursor(<DefaultCursor />)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <div className="cursor-wrapper shadow--md">
                     <DefaultCursor disabled />
                   </div>
                   <h4 className="title">Default</h4>
                 </div>
-                <div className="cursor" style={{ cursor: 'pointer' }}>
-                  <div
-                    className="cursor-wrapper phinger"
-                    onClick={() => updateCursor(<PhingerCursor />)}
-                  >
+                <div
+                  className="cursor"
+                  onClick={() => updateCursor(<PhingerCursor />)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <div className="cursor-wrapper shadow--md phinger">
                     <PhingerCursor disabled />
                   </div>
                   <h4 className="title">Phinger</h4>
                 </div>
-                <div className="cursor" style={{ cursor: 'pointer' }}>
-                  <div
-                    className="cursor-wrapper"
-                    onClick={() => updateCursor(<EmojiCursor />)}
-                  >
+                <div
+                  className="cursor"
+                  onClick={() => updateCursor(<EmojiCursor />)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <div className="cursor-wrapper shadow--md">
                     <EmojiCursor disabled />
                   </div>
                   <h4 className="title">Emoji</h4>

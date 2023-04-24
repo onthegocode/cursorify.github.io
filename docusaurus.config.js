@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://cursorify.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -42,14 +42,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/cursorify/cursorify.github.io/tree/main/docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -63,6 +56,7 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/cursorify-social-card.png',
+
       navbar: {
         title: 'React Cursorify',
         logo: {
@@ -77,7 +71,6 @@ const config = {
             label: 'Docs',
           },
           { to: '/cursors', label: 'Cursors', position: 'left', },
-          { to: '/showcase', label: 'Showcase', position: 'left' },
           {
             href: 'https://github.com/cursorify/cursorify',
             label: 'GitHub',
@@ -86,7 +79,7 @@ const config = {
         ],
       },
       footer: {
-        copyright: `Copyright © ${new Date().getFullYear()}. Made with ❤️ by morethanmin`,
+        copyright: `Made with ❤️ by morethanmin`,
       },
       prism: {
         theme: lightCodeTheme,

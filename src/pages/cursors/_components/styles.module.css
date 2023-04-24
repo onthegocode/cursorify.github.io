@@ -1,0 +1,15 @@
+.cursor {
+  margin: 16px 16px 0;
+  border-radius: 12px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phinger > div {
+  margin-right: 12px;
+  margin-bottom: 20px;
+}
+h4 {
+  text-align: center;
+}
