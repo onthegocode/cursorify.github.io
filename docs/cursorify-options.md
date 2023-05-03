@@ -17,7 +17,7 @@ Refer to the description of each option below.
 - breakpoint: You can set breakpoint to disable in mobile size.
 
 ```tsx
-import { CursorifyProvider, EmojiCursor } from '@cursorify/react'
+import { CursorifyProvider, DefaultCursor } from '@cursorify/react'
 
 const App = () => {
   return (
