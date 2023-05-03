@@ -55,6 +55,7 @@ const StyledWrapper = styled.div`
   .window > .content > .title > h2 {
     font-weight: 500;
     color: ${OpenColor.gray[1]};
+    text-align: center;
   }
   .window > .content > .title > .description {
     color: ${OpenColor.gray[5]};
